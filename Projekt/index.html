@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mateo Ljevar - projekt</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="Mateo Ljevar">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" type="image/x-icon" href="favicon/favicon.ico">		
+	<link rel="stylesheet" type="text/css" href="css-java/style.css">
+	<link rel="stylesheet" type="text/css" href="css-java/login.css">
+	<link rel="stylesheet" type="text/css" href="css-java/signup.css">
+</head>
+<body>
+<header style="background-image: url('slike/header.jpg')";></header>
+<div class="topnav">
+	<img class="slika" src="favicon/android-chrome-192x192.png">
+	<h1>GAMESPHERE</h1>
+	<form class="sbar">
+		<input class="src" type="search" placeholder="Što te zanima?">
+		<button class="sbtn" type="submit"></button>
+	</form>
+	<div class="topnav-cent">
+	<a class="acmeni" href="#">Home</a>
+	<a class="meni" href="#">Nekaj</a>
+	<a class="meni" href="#">Nekaj</a>
+	<a class="meni" href="#">Nekaj</a>	
+	<button class="logukras" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+	<button class="sukras" onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Signup</button>
+	</div>
+</div>
+<button onclick="topFunction()" id="myBtn" title="Go to top"></button>
+<!-- Login -->
+<div id="id01" class="logmodal" background="slike/login.jpg">
+	<form class="logmodal-content loganimate" action="/action_page.php" method="post">
+    <div class="logimgcontainer">
+		<img src="slike/login.jpg" alt="Avatar" class="logavatar">
+    </div>
+    <div class="logcontainer-log">
+		<label for="uname" class="loguser"><b>Username</b></label>
+		<input class="login" type="text" placeholder="Enter Username" name="uname" required>
+		<label for="loguser" class="loguser"><b>Password</b></label>
+		<input class="login" type="password" placeholder="Enter Password" name="psw" required>
+      	<label class="logcheck">
+			<input type="checkbox" checked="checked" name="remember"> Remember me
+		</label>
+		<div class="fa">
+		<button class="login123" type="submit">Login</button><br>
+		<span class="fa-or">or</span><br>
+		<div class="ikona-fa">
+		<a href="#"><img src="favicon/google.png" class="fa-ikona"></a>
+		<a href="#"><img src="favicon/facebook.png" class="fa-ikona"></a> 
+		<a href="#"><img src="favicon/twitter.png" class="fa-ikona"></a>
+		</div>
+    </div>
+    <div class="logcontainer" style="background-color:#331E385">
+		<div class="cancelrub">
+		<button type="logcancel" onclick="document.getElementById('id01').style.display='none'" class="logcancel">Cancel</button></div>
+		<span class="psw">Forgot <a class="logpass" href="#">password?</a></span>
+    </div>
+  </form>
+	</div>
+</div>
+<!-- Signup -->
+<div id="id02" class="smodal" background="slike/login.jpg">
+	<form class="smodal-content sanimate" action="/action_page.php" method="post">
+    <div class="simgcontainer">
+		<img src="slike/signup.png" alt="Avatar" class="savatar">
+    </div>
+    <div class="scontainer-log">
+		<label for="uname" class="loguser"><b>Username</b></label>
+		<input class="slogin" type="text" placeholder="Enter Username" name="uname" required>
+		<label for="smail" class="smail"><b>Email</b></label>
+		<input class="slogin" type="email" placeholder="Enter Email" name="uname" required>
+		<label for="loguser" class="loguser"><b>Password</b></label>
+		<input class="slogin" type="password" placeholder="Enter Password" name="psw" required>
+		<label for="spasw" class="spasw"><b>Repeat Password</b></label>
+		<input class="slogin" type="password" placeholder="Repeat Password" name="psw" required>
+      	<label class="scheck">
+			<input type="checkbox" checked="checked" name="remember" required> By creating an account you agree to our <a class="signup" href="#">Terms & Privacy.</a>
+		</label>
+	</div>
+	<div class="scontainer" style="background-color:#331E385">
+		<button class="sign123" type="submit">Sign up</button>
+		<button type="scancel" onclick="document.getElementById('id02').style.display='none'" class="scancel">Cancel</button>
+	</div>
+	</form>
+</div>
+<script>
+// Get the modal
+var modal1 = document.getElementById('id01');
+var modal2 = document.getElementById('id02');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal1) {
+        modal1.style.display = "none";
+    }
+    if (event.target == modal2) {
+        modal2.style.display = "none";
+    }
+}
+// Get the button
+let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+<button onclick="topFunction()" id="myBtn" title="Top"></button>
+
+
+
+
+<div class="iza">
+<div class="tekst">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><br>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Volutpat commodo sed egestas egestas fringilla phasellus faucibus scelerisque eleifend. Ante in nibh mauris cursus mattis molestie a. Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Accumsan lacus vel facilisis volutpat. Enim nunc faucibus a pellentesque. Donec ultrices tincidunt arcu non sodales neque sodales ut etiam. Nulla pharetra diam sit amet. Egestas sed tempus urna et pharetra pharetra massa massa. Aliquam faucibus purus in massa. Integer eget aliquet nibh praesent. Donec massa sapien faucibus et molestie. Mattis nunc sed blandit libero volutpat sed cras. Risus at ultrices mi tempus imperdiet nulla.</p><br>
+<p>In eu mi bibendum neque egestas congue quisque egestas. Ullamcorper velit sed ullamcorper morbi tincidunt ornare massa eget. At elementum eu facilisis sed odio. Scelerisque fermentum dui faucibus in ornare quam viverra orci. Ut tellus elementum sagittis vitae et leo duis ut diam. Nullam vehicula ipsum a arcu cursus vitae. Vel facilisis volutpat est velit egestas dui id ornare. Sagittis orci a scelerisque purus semper. In hac habitasse platea dictumst quisque sagittis. Interdum consectetur libero id faucibus nisl. Mattis aliquam faucibus purus in massa tempor nec feugiat nisl. Vestibulum lorem sed risus ultricies tristique nulla. Ut morbi tincidunt augue interdum. Sapien eget mi proin sed libero enim. Elementum eu facilisis sed odio morbi. Tempus quam pellentesque nec nam aliquam. Interdum varius sit amet mattis vulputate enim nulla. Est pellentesque elit ullamcorper dignissim cras tincidunt. Viverra nam libero justo laoreet. Turpis tincidunt id aliquet risus feugiat in ante.</p><br>
+<p>Cursus vitae congue mauris rhoncus aenean vel elit scelerisque mauris. Suscipit adipiscing bibendum est ultricies integer quis auctor elit. Fringilla ut morbi tincidunt augue interdum velit euismod in. Commodo elit at imperdiet dui accumsan. Ullamcorper a lacus vestibulum sed arcu non odio. Amet massa vitae tortor condimentum lacinia. Orci nulla pellentesque dignissim enim sit. Commodo sed egestas egestas fringilla phasellus faucibus. Sed risus pretium quam vulputate dignissim suspendisse in est ante. Elementum sagittis vitae et leo. Nisi porta lorem mollis aliquam ut porttitor leo. Vulputate dignissim suspendisse in est ante in nibh mauris cursus. Erat imperdiet sed euismod nisi porta lorem mollis aliquam ut. Massa massa ultricies mi quis. Fusce id velit ut tortor pretium viverra.</p><br>
+<p></p>
+</div>
+<div>
+</body>
+</html>
+
+https://templatemo.com/live/templatemo_579_cyborg_gaming

@@ -1,0 +1,215 @@
+/* Login preko ekrana*/
+
+/* Set a style for all buttons */
+.sukras {
+	float: right;
+	color:#F4E8C1;
+	text-align: center;
+	padding-top: .7%;
+	padding-bottom: .2%;
+	padding-right: 15px;
+	padding-left: 10px;
+	text-decoration: none;
+	font-size: 17px;
+	font-family: 'Lucida Console', Monospace;
+	background-color: #706993;
+	border: 0;
+	font-weight: bold;
+	display: flex;
+	cursor: pointer;
+}
+
+.sukras:hover {
+	color: #70A0AF;
+	transition: all 0.3s ease-out;
+	opacity: 1;
+}
+
+/* Extra styles for the cancel button */
+.scancel {
+	padding-bottom: 7px;
+	padding-top: 7px;
+	background-color: #f44336;
+	border: 0;
+	text-decoration: none;
+	font-size: 15px;
+	font-family: 'Lucida Console', Monospace;
+	border-radius: 50px;
+	width: 25%;
+	display: block;
+	margin-left: auto;
+	margin-right: 15%;
+	float: left;
+}
+.scancel:hover {
+	background-color: #70A0AF;
+	color: #F4E8C1;
+	transition: all 0.3s ease-out;
+	opacity: 1;
+}
+/* Center the image and position the close button */
+.simgcontainer {
+	text-align: center;
+	margin-top: 0;
+	position: cover;
+	margin-bottom: 2%;
+}
+
+img.savatar {
+	width: 100%;  
+	height: 400px;
+	border-radius: 50px 50px 0 0;
+	object-fit: cover;
+}
+
+.scontainer {
+	padding-bottom: 3%;
+	padding-top: 0;
+	display: flex;
+	justify-content: center;
+}
+.sontainer-log {
+	padding: 1%;
+	padding-top: 0;
+}
+.scancelrub {
+	padding-bottom: 5%;
+}
+a.signup {
+	color:#70A0AF;
+	text-decoration: none;
+}
+a.signup:hover {
+	background-color: #70A0AF;
+	color: #F4E8C1;
+	transition: all 0.3s ease-out;
+	opacity: 1;
+}
+span.psw {
+	float: right;
+	width: auto;
+	padding-top: 0;
+	text-decoration: none;
+	font-size: 15px;
+	font-family: 'Lucida Console', Monospace;
+	border-radius: 10px;
+	margin-left: auto;
+	margin-right: 11%;;
+}
+
+/* The Modal (background) */
+.smodal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: grey; /* Fallback color */
+	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+	padding-top: 40px;
+}
+
+/* Modal Content/Box */
+.smodal-content {
+	background-color: #706993;
+	margin: auto; /* 5% from the top, 15% from the bottom and centered */
+	border: 2px solid #70A0AF;
+	width: 40%; /* Could be more or less, depending on screen size */
+	border-radius: 50px;
+	opacity: 0.9;
+}
+
+/* Add Zoom Animation */
+.sanimate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+
+.loguser {
+	float: center;
+	color:#F4E8C1;
+	text-align: center;
+	padding-top: 5px;
+	right: 50%;
+	padding-left: 10px;
+	text-decoration: none;
+	font-size: 17px;
+	font-family: 'Lucida Console', Monospace;
+	display: block;
+	margin-left: auto;
+	margin-right: 58%;
+}
+input.slogin{
+	background-color: #331E38;
+	font-family: 'Lucida Console', Monospace;
+	font-size: 15px;
+	padding-left: 15px;
+	width: 70%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+input.slogin:hover, input.slogin:focus {
+	background-color: #F4E8C1;
+}
+
+
+.sign123 {
+	width: auto;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	background-color: #331E38;
+	color: #F4E8C1;
+	border: 0;
+	text-decoration: none;
+	font-size: 15px;
+	font-family: 'Lucida Console', Monospace;
+	border-radius: 30px;
+	width: 25%;
+	margin-left: 15%;
+	margin-right: auto;
+	margin-bottom: 0;
+	float: left;
+}
+.sign123:hover {
+	background-color: #70A0AF;
+	color: #F4E8C1;
+	transition: all 0.3s ease-out;
+	opacity: 1;
+}
+.scheck {
+	width: 75%;
+	display: block;
+	margin-left: 15%;
+	margin-right: 15%;
+	margin-right: auto;
+	padding-bottom: 3%;
+	font-family: 'Lucida Console', Monospace;
+	font-size: 13px;
+	float: center;
+	color: #F4E8C1;
+}
