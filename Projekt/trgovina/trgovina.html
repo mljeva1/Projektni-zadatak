@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mateo Ljevar - projekt</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="Mateo Ljevar">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" type="image/x-icon" href="favicon/favicon.ico">		
+	<link rel="stylesheet" type="text/css" href="../css-java/login.css">
+	<link rel="stylesheet" type="text/css" href="../css-java/signup.css">
+	<link rel="stylesheet" type="text/css" href="trgovina/trgovina.css">
+</head>
+<body>
+</body>
+<header style="background-image: url('slike/header.jpg')";></header>
+<div class="topnav">
+	<img class="slika" src="../favicon/android-chrome-192x192.png">
+	<h1>GAMESPHERE</h1>
+	<form class="sbar">
+		<input class="src" type="search" placeholder="Što te zanima?">
+		<button class="sbtn" type="submit"></button>
+	</form>
+	<div class="topnav-cent">
+	<a class="meni" href="../index.html">Naslovna</a>
+	<a class="acmeni" href="#">Trgovina</a>
+	<a class="meni" href="#">Kavana</a>
+	<a class="meni" href="#">O nama</a>	
+	<div id="border-log"></div>
+	<button class="logukras" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Prijava</button>
+	<button class="sukras" onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Registracija</button>
+	</div>
+</div>
+<button onclick="topFunction()" id="myBtn" title="Go to top"></button>
+<!-- Login -->
+<div id="id01" class="logmodal" background="../slike/login.jpg">
+	<form class="logmodal-content loganimate" action="/action_page.php" method="post">
+    <div class="logimgcontainer">
+		<img src="../slike/login.jpg" alt="Avatar" class="logavatar">
+    </div>
+    <div class="logcontainer-log">
+		<label for="uname" class="logus"><b>Korisničko ime</b></label>
+		<input class="login" type="text" placeholder="Unesite korisničko ime" name="uname" required>
+		<label for="loguser" class="loguser"><b>Lozinka</b></label>
+		<input class="login" type="password" placeholder="Unesite lozinku" name="psw" required>
+      	<label class="logcheck">
+			<input type="checkbox" checked="checked" name="remember"> Remember me
+		</label>
+		<div class="fa">
+		<button class="login123" type="submit">Prijava</button><br>
+		<span class="fa-or">ili</span><br>
+		<div class="ikona-fa">
+		<a href="#"><img src="../favicon/google.png" class="fa-ikona"></a>
+		<a href="#"><img src="../favicon/facebook.png" class="fa-ikona"></a> 
+		<a href="#"><img src="../favicon/twitter.png" class="fa-ikona"></a>
+		</div>
+    </div>
+    <div class="logcontainer" style="background-color:#331E385">
+		<div class="cancelrub">
+		<button type="logcancel" onclick="document.getElementById('id01').style.display='none'" class="logcancel">Poništi</button></div>
+		<span class="psw">Zaboravljena <a class="logpass" href="#">lozinka?</a></span>
+    </div>
+  </form>
+	</div>
+</div>
+<!-- Signup -->
+<div id="id02" class="smodal" background="../slike/login.jpg">
+	<form class="smodal-content sanimate" action="/action_page.php" method="post">
+    <div class="simgcontainer">
+		<img src="../slike/signup.png" alt="Avatar" class="savatar">
+    </div>
+    <div class="scontainer-log">
+		<label for="uname" class="slogus"><b>Korisničko ime</b></label>
+		<input class="slogin" type="text" placeholder="Unesite korisničko ime" name="uname" required>
+		<label for="smail" class="smail"><b>Email</b></label>
+		<input class="slogin" type="email" placeholder="Unesite Email" name="uname" required>
+		<label for="loguser" class="loguser"><b>Lozinka</b></label>
+		<input class="slogin" type="password" placeholder="Unesite lozinku" name="psw" required>
+		<label for="spasw" class="spasw"><b>Ponovite lozinku</b></label>
+		<input class="slogin" type="password" placeholder="Unesite lozinku" name="psw" required>
+      	<label class="scheck">
+			<input type="checkbox" checked="checked" name="remember" required> By creating an account you agree to our <a class="signup" href="#">Terms & Privacy.</a>
+		</label>
+	</div>
+	<div class="scontainer" style="background-color:#331E385">
+		<button class="sign123" type="submit">Registriraj me</button>
+		<button type="scancel" onclick="document.getElementById('id02').style.display='none'" class="scancel">Poništi</button>
+	</div>
+	</form>
+</div>
+<script>
+// Get the modal
+var modal1 = document.getElementById('id01');
+var modal2 = document.getElementById('id02');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal1) {
+        modal1.style.display = "none";
+    }
+    if (event.target == modal2) {
+        modal2.style.display = "none";
+    }
+}
+// Get the button
+let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+<button onclick="topFunction()" id="myBtn" title="Top"></button>
+
+<div class="iza">
+
+</div>
