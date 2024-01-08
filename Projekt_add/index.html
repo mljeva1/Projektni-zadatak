@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mateo Ljevar - projekt</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="Mateo Ljevar">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="shortcut icon" type="image/x-icon" href="favicon/favicon.ico">		
+	<link rel="stylesheet" type="text/css" href="css-java/style.css">
+	<link rel="stylesheet" type="text/css" href="css-java/login.css">
+	<link rel="stylesheet" type="text/css" href="css-java/signup.css">
+</head>
+<body>
+<header style="background-image: url('slike/header.jpg')";></header>	
+<div class="nav">
+		<input type="checkbox" id="check">
+		<label for="check" class="checkbtn">&#9776;</label>	
+		<label class="logo">
+			<img src="favicon/android-chrome-192x192.png">
+			<h1>GAMESPHERE</h1>
+			<form class="sbar">
+			<input class="src" type="search" placeholder="Što te zanima?">
+			<button class="sbtn" type="submit"></button>
+		</form>
+		</label>
+		<ul>
+			<label for="check" class="checkbtn" id="sik">&#9773;</label>	
+			<li><a class="acmeni" href="#">Naslovna</a></li>
+			<li><a href="trgovina/trgovina.html">Trgovina</a></li>
+			<li><a href="#">Kavana</a></li>
+			<li><a href="#">O nama</a></li>
+			<li><a onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Prijava</a></li>
+			<li><a onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Registracija</a></li>
+		</ul>
+</div>
+<button onclick="topFunction()" id="myBtn" title="Go to top"></button>
+
+<!-- Login -->
+<div id="id01" class="logmodal" background="slike/login.jpg">
+	<form class="logmodal-content loganimate" action="/action_page.php" method="post">
+    <div class="logimgcontainer">
+		<img src="slike/login.jpg" alt="Avatar" class="logavatar">
+    </div>
+    <div class="logcontainer-log">
+		<label for="uname" class="logus"><b>Korisničko ime</b></label>
+		<input class="login" type="text" placeholder="Unesite korisničko ime" name="uname" required>
+		<label for="loguser" class="logus"><b>Lozinka</b></label>
+		<input class="login" type="password" placeholder="Unesite lozinku" name="psw" required>
+      	<label class="logcheck">
+			<input type="checkbox" checked="checked" name="remember"> Remember me
+		</label>
+		<div class="fa">
+		<button class="login123" type="submit">Prijava</button><br>
+		<span class="fa-or">ili</span><br>
+		<div class="ikona-fa">
+		<a href="#"><img src="favicon/google.png" class="fa-ikona"></a>
+		<a href="#"><img src="favicon/facebook.png" class="fa-ikona"></a> 
+		<a href="#"><img src="favicon/twitter.png" class="fa-ikona"></a>
+		</div>
+    </div>
+    <div class="logcontainer" style="background-color:#331E385">
+		<div class="cancelrub">
+		<button type="logcancel" onclick="document.getElementById('id01').style.display='none'" class="logcancel">Poništi</button></div>
+		<span class="psw">Zaboravljena <a class="logpass" href="#">lozinka?</a></span>
+    </div>
+	</form>
+	</div>
+</div>
+<!-- Signup -->
+<div id="id02" class="smodal" background="slike/login.jpg">
+	<form class="smodal-content sanimate" action="/action_page.php" method="post">
+    <div class="simgcontainer">
+		<img src="slike/signup.png" alt="Avatar" class="savatar">
+    </div>
+    <div class="scontainer-log">
+		<label for="uname" class="slogus"><b>Korisničko ime</b></label>
+		<input class="slogin" type="text" placeholder="Unesite korisničko ime" name="uname" required>
+		<label for="smail" class="smail"><b>Email</b></label>
+		<input class="slogin" type="email" placeholder="Unesite Email" name="uname" required>
+		<label for="loguser" class="loguser"><b>Lozinka</b></label>
+		<input class="slogin" type="password" placeholder="Unesite lozinku" name="psw" required>
+		<label for="spasw" class="spasw"><b>Ponovite lozinku</b></label>
+		<input class="slogin" type="password" placeholder="Unesite lozinku" name="spasw" required>
+      	<label class="scheck">
+			<input type="checkbox" checked="checked" name="remember" required> By creating an account you agree to our <a class="signup" href="#">Terms & Privacy.</a>
+		</label>
+	</div>
+	<div class="scontainer" style="background-color:#331E385">
+		<button class="sign123" type="submit">Registriraj me</button>
+		<button type="scancel" onclick="document.getElementById('id02').style.display='none'" class="scancel">Poništi</button>
+	</div>
+	</form>
+</div>
+<script>
+// Get the modal
+var modal1 = document.getElementById('id01');
+var modal2 = document.getElementById('id02');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal1) {
+        modal1.style.display = "none";
+    }
+    if (event.target == modal2) {
+        modal2.style.display = "none";
+    }
+}
+// Get the button
+let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+<button onclick="topFunction()" id="myBtn" title="Top"></button>
+
+<!-- content -->
+<div class="iza">
+<div class="bn">
+	<div class="bn-row">
+		<div class="bn-h">Dobrodošli u GameSphere</div>
+		<h4><span class="bn-s">Pretražite</span> popularne igrice ovdje</h4>
+		<a class="bn-btn" href="#">Pretraži sada</a>
+	</div>
+</div>
+<!-- Most popular -->
+<div class="most-popular">
+	<div class="most-popular-row">
+		<h4>Najpopularnije igre <span class="mp-s">danas</span></h4>
+		<div class="mp-g-row">
+			<div class="mp-g">
+				<div class="mp-item">
+					<img src="slike/pubg.jpg" alt>
+					<h4>PUBG<br><span>Krafton</span></h4>
+					<ul>
+						<li><i></i>4.8
+						</li>
+						<div class="mp-items">
+						<li><i></i>1.8B
+						</li></div>
+					</ul>
+				</div>
+			</div>
+			<div class="mp-g">
+				<div class="mp-item">
+					<img src="slike/lol.jpg" alt>
+					<h4>LoL<br><span>Riot Games</span></h4>
+					<ul>
+						<li><i></i>4.9
+						</li>
+						<div class="mp-items">
+						<li><i></i>150M
+						</li></div>
+					</ul>
+				</div>
+			</div>
+			<div class="mp-g">
+				<div class="mp-item">
+					<img src="slike/valorant.jpg" alt>
+					<h4>Valorant<br><span>Riot Games</span></h4>
+					<ul>
+						<li><i></i>4.0
+						</li>
+						<div class="mp-items">
+						<li><i></i>17M
+						</li></div>
+					</ul>
+				</div>
+			</div>
+			<div class="mp-g">
+				<div class="mp-item">
+					<img src="slike/minecraft.jpg" alt>
+					<h4>Minecraft<br><span>Mojang Studios</span></h4>
+					<ul>
+						<li><i></i>4.5
+						</li>
+						<div class="mp-items">
+						<li><i></i>176M
+						</li></div>
+					</ul>
+				</div>
+			</div>
+			<div class="mp-g">
+				<div class="mp-item">
+					<img src="slike/csgo.jpg" alt>
+					<h4>CSGO<br><span>Valve</span></h4>
+					<ul>
+						<li><i></i>4.0
+						</li>
+						<div class="mp-items">
+						<li><i></i>326M
+						</li></div>
+					</ul>
+				</div>
+			</div>
+			<div class="mp-g">
+				<div class="mp-item">
+					<img src="slike/codwar.jpg" width="100%" alt>
+					<h4>CoD Warzone<br><span>Activision</span></h4>
+					<ul>
+						<li><i></i>4.4
+						</li>
+						<div class="mp-items">
+						<li><i></i>100M
+						</li></div>
+					</ul>
+				</div>
+			</div>
+			<div class="mp-g">
+				<div class="mp-item">
+					<img src="slike/apex.jpg" width="100%" alt>
+					<h4>Apex<br><span>Electronics Arts</span></h4>
+					<ul>
+						<li><i></i>4.8
+						</li>
+						<div class="mp-items">
+						<li><i></i>130M
+						</li></div>
+					</ul>
+				</div>
+			</div>
+			<div class="mp-g">
+				<div class="mp-item">
+					<img src="slike/amogus.jpg" width="100%" alt>
+					<h4>Among us<br><span>Innersloth</span></h4>
+					<ul>
+						<li><i></i>4.6
+						</li>
+						<div class="mp-items">
+						<li><i></i>530M
+						</li></div>
+					</ul>
+				</div>
+			</div>
+			<div class="mp-button">
+				<div class="mpp-button">
+					<a href="#">Istražite više</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Novosti -->
+<div class="novosti">
+	<div class="novosti-row">
+		<h4>Novosti</h4>
+		<div class="novosti-g-row">
+			<div class="nove-igre">
+				<h6>Nove igre</h6><div id="border-nov"></div>
+				<div class="novosti-g">
+					<div class="novosti-item">
+						<img src="slike/asgard.jpg">
+						<div class="novosti-item-txt">
+							<h6>Asgard's Wrath 2</h6>
+							<p>Asgard's Wrath 2 je nastavak hvaljene VR avanture iz 2019. godine. Igra je razvijena od strane Oculus Studios i objavljena od strane Meta. U igri igrači preuzimaju ulogu Odina, boga nordijske mitologije. Odin mora spasiti svoj svijet od Ragnaroka, konačnog sukoba između bogova i divova.</p>
+							<p>Igra je napravljena s Unreal Engine 5 i isporučuje nevjerojatnu vizualnu kvalitetu. Svijet igre je bogat detaljima i živim bojama. Likovima su također dodijeljeni detaljni modeli i animacije.</p>
+							<p>Zašto igrati:</p>
+							<ul>
+								<li>Nevjerojatna vizualna kvaliteta</li>
+								<li>Uzbudljive i izazovne borbe</li>
+								<li>Dobro dizajnirane zagonetke</li>
+								<li>Mnogo sadržaja za istraživanje</li>
+							</ul>
+							<p>Zašto izbjegavati:</p>
+							<ul>
+								<li>Igra može biti preduga za neke igrače</li>
+							</ul>
+							<p style="font-size:14px;">Ocjena: <span style="color:#70A0AF">9/10</span></p>
+						</div>
+					</div>
+					<div class="novosti-item">
+						<img src="slike/trinity.jpg">
+						<div class="novosti-item-txt">
+							<h6>Trinity Fusion</h6>
+							<p>Trinity Fusion je 2D akcijsko-roguelite platforma razvijena od strane Angry Mob Games. Igra je izašla iz ranog pristupa 2. prosinca 2022. godine i dostupna je na PlayStation 4, Xbox One, Microsoft Windows, Xbox Series X i Series S, PlayStation 5.</p>
+							<p>U igri igrači preuzimaju ulogu Maye, cross-dimenzionalnog ratnika koji je psihički povezan s njezinim triju paralelnih selves. Maya i njezine paralelne selves moraju se udružiti kako bi spasili svemir od uništenja. Igra se igra iz 2D perspektive i fokusira se na brzu i fluidnu akciju. Igrači mogu koristiti niz različitih oružja i sposobnosti kako bi se borili protiv neprijatelja. Borbe su uzbudljive i izazovne, a igra nudi veliku raznolikost neprijatelja i izazova.</p>
+							<p>Zašto igrati:</p>
+							<ul>
+								<li>Brza i fluidna akcija</li>
+								<li>Raznovrsni neprijatelji i izazovi</li>
+								<li>Jedinstveni twist paralelnih selves</li>
+								<li>Velika količina sadržaja za istraživanje</li>
+							</ul>
+							<p>Zašto izbjegavati:</p>
+							<ul>
+								<li>Igra može biti repetitivna za neke igrače</li>
+							</ul>
+							<p style="font-size:14px;">Ocjena: <span style="color:#70A0AF">8/10</span></p>
+						</div>
+					</div>
+					<div class="novosti-item">
+						<img src="slike/knight.jpg">
+						<div class="novosti-item-txt">
+							<h6>Bahnsen Knights</h6>
+							<p>Bahnsen Knights je treća igra u seriji Pixel Pulps, koja kombinira stiliziranu grafiku u stilu 80-ih godina prošlog stoljeća s uzbudljivom pričom inspiriranom pulpom. Igra je izašla 31. kolovoza 2023. godine za PC, Mac, Nintendo Switch, PlayStation 4 i Xbox One.</p>
+							<p>U igri igrači preuzimaju ulogu Bouldera, agenta koji se infiltrira u kult Bahnsen Knights. Kult je osnovao Toni, bivši car salesman koji propovijeda da je pakao iznad nas, a ne ispod. Boulderova je misija pronaći svog nestalog partnera Cupru i otkriti što se krije iza kulta.
+							Igra se igra iz perspektive trećeg lica i kombinira elemente interaktivnog romana s mini igrama. Igrači moraju donositi odluke koje utječu na priču, a također moraju rješavati zagonetke i boriti se protiv neprijatelja.</p>
+							<p>Zašto igrati:</p>
+							<ul>
+								<li>Atmosferična horor priča</li>
+								<li>Stilizirana grafika u stilu 80-ih godina prošlog stoljeća</li>
+								<li>Uzbudljiva i puna obrata priča</li>
+								<li>Jednostavno i intuitivno igranje</li>
+							</ul>
+							<p>Zašto izbjegavati:</p>
+							<ul>
+								<li>Borbe mogu biti repetitivne za neke igrače</li>
+								<li>Priča može biti preduga za neke igrače</li>
+							</ul>
+							<p style="font-size:14px;">Ocjena: <span style="color:#70A0AF">8/10</span></p>
+						</div>	
+					
+					</div>
+				</div>
+				<div class="gt-button">
+					<div class="gtt-button">
+						<a href="#">Saznaj više</a>
+					</div>
+				</div>
+			</div>
+			<div class="dalje">
+				<h6>Nadolazeće igre</h6><div id="border-nov"></div>
+				<div class="novosti-g">
+					<div class="novosti-item">
+						<img src="slike/lass.jpg">
+						<div class="novosti-item-txt">
+							<h6>The Last of Us Part II Remastered</h6>
+							<p>The Last of Us Part II Remastered je remasterirana verzija hvaljene avanturističke igre iz 2020. godine. Igra je razvijena od strane Naughty Dog i objavljena od strane Sony Interactive Entertainment. Remastered verzija je dostupna na PlayStation 5.</p>
+							<p>Remastered verzija donosi značajna grafička poboljšanja u odnosu na originalnu igru. Igra sada ima rezoluciju 4K pri 60 sličica u sekundi, što rezultira glatkijim i realističnijim izgledom. Poboljšane teksture i modeli likova čine svijet igre još uvjerljivijim. Također su poboljšane animacije, što čini kretanje likova prirodnijim.</p>
+							<p>Zašto igrati:</p>
+							<ul>
+								<li>Značajna grafička poboljšanja</li>
+								<li>Novi No Return Mode</li>
+								<li>Igra je još uvijek jednako uzbudljiva i zabavna kao i original</li>
+							</ul>
+							<p>Zašto izbjegavati:</p>
+							<ul>
+								<li>Igra je još uvijek prilično duga</li>
+								<li>Neki igrači mogu biti frustrirani No Return Modom</li>
+							</ul>
+							<p style="font-size:14px;">Datum izlaska: <span style="color:#70A0AF">19.01.2024.</span></p>
+						</div>
+					</div>
+					<div class="novosti-item">
+						<img src="slike/tekken.jpg">
+						<div class="novosti-item-txt">
+							<h6>Tekken 8</h6>
+							<p>Tekken 8 je nastavak popularne borilačke igre iz 2017. godine. Igra je razvijena od strane Bandai Namco Studios i objavljena od strane Bandai Namco Entertainment. Igra je izašla 26. siječnja 2024. godine za PlayStation 5, Xbox Series X/S i Microsoft Windows.</p>
+							<p>Priča u Tekken 8 nastavlja se na događaje iz prethodne igre. Jin Kazama je pobijedio svog oca Heihachija i preuzeo kontrolu nad G Corporationom. Međutim, Jin je još uvijek opsjednut demonskim urom Devil Gene. U međuvremenu, Kazuya Mishima, Heihachijev sin, također je opsjednut Devil Geneom. Kazuya je uspio preživjeti borbu protiv Jina i sada planira preuzeti kontrolu nad G Corporationom.</p>
+							<p>Tekken 8 je impresivan nastavak popularne borilačke igre. Igra nudi novu priču, nove značajke i nevjerojatnu grafiku. Igra je obavezna za sve ljubitelje borilačkih igara.</p>
+							<p>Zašto igrati:</p>
+							<ul>
+								<li>Uzbudljiva priča</li>
+								<li>Nove značajke</li>
+								<li>Nevjerojatna grafika</li>
+							</ul>
+							<p>Zašto izbjegavati:</p>
+							<ul>
+								<li>Igra može biti previše složena za neke igrače</li>
+							</ul>
+							<p style="font-size:14px;">Datum izlaska: <span style="color:#70A0AF">26.01.2024.</span></p>
+						</div>
+					</div>
+					<div class="novosti-item">
+						<img src="slike/final.jpg">
+						<div class="novosti-item-txt">
+							<h6>Final Fantasy VII Rebirth</h6>
+							<p>U igri igrači preuzimaju ulogu Clouda Strifea i njegovih prijatelja dok nastavljaju svoju borbu protiv Shinra Electric Power Companya. Igra se odvija neposredno nakon događaja iz prethodne igre, a Cloud i njegovi prijatelji bježe iz Midgara, distopijske metropole.</p>
+							<p>Priča u Final Fantasy VII Rebirth nastavlja se na događaje iz prethodne igre. Cloud i njegovi prijatelji bježe iz Midgara, ali njihova sloboda je kratkotrajna kada se susreću s novim neprijateljima i otkriju nove tajne o Sephirothu.
+							Igra također istražuje prošlost Clouda i njegovih prijatelja, otkrivajući više o njihovim vezama i traumama. To će dodatno produbiti priču i učiniti je još emotivnijom i uzbudljivijom.</p>
+							<p>Final Fantasy VII Rebirth je impresivan nastavak hvaljenog JRPG-a. Igra nudi novu i uzbudljivu priču, poboljšano igranje i nevjerojatnu grafiku. Igra je obavezna za sve ljubitelje JRPG-a.</p>
+							<p>Zašto igrati:</p>
+							<ul>
+								<li>Uzbudljiva i emotivna priča</li>
+								<li>Poboljšano igranje</li>
+								<li>Nevjerojatna grafika</li>
+							</ul>
+							<p>Zašto izbjegavati:</p>
+							<ul>
+								<li>Igra može biti preduga za neke igrače</li>
+								<li>Neki igrači mogu biti frustrirani borbama koji su postali dinamičniji i intenzivniji</li>
+							</ul>
+							<p style="font-size:14px;">Datum izlaska: <span style="color:#70A0AF">29.02.2024.</span></p>
+						</div>
+					</div>
+					
+				</div>
+				<div class="gt-button">
+					<div class="gtt-button">
+						<a href="#">Saznaj više</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+	</div>
+</div>
+</div>
+<footer>
+	<div class="fcont">
+		<p>Copyright © 2036 <a href="#">GameSphere</a> Company. All right reserved.</p>
+	</div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mateo Ljevar - projekt</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="Mateo Ljevar">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" type="image/x-icon" href="../favicon/favicon.ico">		
+	<link rel="stylesheet" type="text/css" href="../css-java/login.css">
+	<link rel="stylesheet" type="text/css" href="../css-java/signup.css">
+	<link rel="stylesheet" type="text/css" href="trgovina/trgovina.css">
+</head>
+<body>
+</body>
+<header style="background-image: url('slike/header.jpg')";></header>	
+<div class="nav">
+		<input type="checkbox" id="check">
+		<label for="check" class="checkbtn">&#9776;</label>	
+		<label class="logo">
+			<img src="../favicon/android-chrome-192x192.png">
+			<h1>GAMESPHERE</h1>
+			<form class="sbar">
+			<input class="src" type="search" placeholder="Što te zanima?">
+			<button class="sbtn" type="submit"></button>
+		</form>
+		</label>
+		<ul>
+			<label for="check" class="checkbtn" id="sik">&#9773;</label>	
+			<li><a href="../index.html">Naslovna</a></li>
+			<li><a class="acmeni" href="#">Trgovina</a></li>
+			<li><a href="#">Kavana</a></li>
+			<li><a href="#">O nama</a></li>
+			<li><a onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Prijava</a></li>
+			<li><a onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Registracija</a></li>
+		</ul>
+</div>
+<button onclick="topFunction()" id="myBtn" title="Go to top"></button>
+
+<!-- Login -->
+<div id="id01" class="logmodal" background="../slike/login.jpg">
+	<form class="logmodal-content loganimate" action="/action_page.php" method="post">
+    <div class="logimgcontainer">
+		<img src="../slike/login.jpg" alt="Avatar" class="logavatar">
+    </div>
+    <div class="logcontainer-log">
+		<label for="uname" class="logus"><b>Korisničko ime</b></label>
+		<input class="login" type="text" placeholder="Unesite korisničko ime" name="uname" required>
+		<label for="loguser" class="logus"><b>Lozinka</b></label>
+		<input class="login" type="password" placeholder="Unesite lozinku" name="psw" required>
+      	<label class="logcheck">
+			<input type="checkbox" checked="checked" name="remember"> Remember me
+		</label>
+		<div class="fa">
+		<button class="login123" type="submit">Prijava</button><br>
+		<span class="fa-or">ili</span><br>
+		<div class="ikona-fa">
+		<a href="#"><img src="../favicon/google.png" class="fa-ikona"></a>
+		<a href="#"><img src="../favicon/facebook.png" class="fa-ikona"></a> 
+		<a href="#"><img src="../favicon/twitter.png" class="fa-ikona"></a>
+		</div>
+    </div>
+    <div class="logcontainer" style="background-color:#331E385">
+		<div class="cancelrub">
+		<button type="logcancel" onclick="document.getElementById('id01').style.display='none'" class="logcancel">Poništi</button></div>
+		<span class="psw">Zaboravljena <a class="logpass" href="#">lozinka?</a></span>
+    </div>
+	</form>
+	</div>
+</div>
+<!-- Signup -->
+<div id="id02" class="smodal" background="../slike/login.jpg">
+	<form class="smodal-content sanimate" action="/action_page.php" method="post">
+    <div class="simgcontainer">
+		<img src="../slike/signup.png" alt="Avatar" class="savatar">
+    </div>
+    <div class="scontainer-log">
+		<label for="uname" class="slogus"><b>Korisničko ime</b></label>
+		<input class="slogin" type="text" placeholder="Unesite korisničko ime" name="uname" required>
+		<label for="smail" class="smail"><b>Email</b></label>
+		<input class="slogin" type="email" placeholder="Unesite Email" name="uname" required>
+		<label for="loguser" class="loguser"><b>Lozinka</b></label>
+		<input class="slogin" type="password" placeholder="Unesite lozinku" name="psw" required>
+		<label for="spasw" class="spasw"><b>Ponovite lozinku</b></label>
+		<input class="slogin" type="password" placeholder="Unesite lozinku" name="spasw" required>
+      	<label class="scheck">
+			<input type="checkbox" checked="checked" name="remember" required> By creating an account you agree to our <a class="signup" href="#">Terms & Privacy.</a>
+		</label>
+	</div>
+	<div class="scontainer" style="background-color:#331E385">
+		<button class="sign123" type="submit">Registriraj me</button>
+		<button type="scancel" onclick="document.getElementById('id02').style.display='none'" class="scancel">Poništi</button>
+	</div>
+	</form>
+</div>
+<script>
+// Get the modal
+var modal1 = document.getElementById('id01');
+var modal2 = document.getElementById('id02');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal1) {
+        modal1.style.display = "none";
+    }
+    if (event.target == modal2) {
+        modal2.style.display = "none";
+    }
+}
+// Get the button
+let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+<button onclick="topFunction()" id="myBtn" title="Top"></button>
+
+<!-- content -->
+
+<div class="iza">
+
+<div class="bn">
+	<div class="bn-row">
+		<div class="nekaj"><h3>Dobrodošli u trgovinu</h3></div>
+		<h4 class="bn-back"><span class="bn-s">Želimo Vam</span> ugodan boravak u našoj trgovini i da pronađete sve što ste tražili.</h4>
+	</div>
+</div>
+
+<div class="contain">
+	<input type="radio" id="sve" name="filter" class="radiobtn" checked>
+	<input type="radio" id="igrice" name="filter" class="radiobtn">
+	<input type="radio" id="pc" name="filter" class="radiobtn">
+	<input type="radio" id="merch" name="filter" class="radiobtn">
+	<header id="filter">
+		<h4>Filter</h4>
+		<span id="border"></span>
+		<label for="sve" class="filter-label sve">Sve</label>
+		<label for="igrice" class="filter-label igrice">Igrice</label>
+		<label for="pc" class="filter-label pc">PC</label>
+		<label for="merch" class="filter-label merch">Merch</label>
+		<span id="border1"></span>
+	</header>
+	<main class="art">
+		<article class="art-item sve merch">
+			<img src="slike/mug.jpg">
+			<h4>Šalica</h4>
+			<ul>
+				<li><i></i>
+				</li>
+				<li>9,87 €</li>
+			</ul>
+		</article>
+		<article class="art-item sve igrice" id="igrice">
+			<img src="slike/fc24.jpg">
+			<h4>EA Sports FC 24</h4>
+			<ul>
+				<li><i></i>
+				</li>
+				<li>61,89 €</li>
+			</ul>
+		</article>
+		<article class="art-item sve pc">
+			<img src="slike/pcrox.jpg">
+			<h4>ASUS ROG Strix GA15</h4>
+			<ul>
+				<li><i></i>
+				</li>
+				<li>1.599,00 €</li>
+			</ul>
+		</article>
+		<article class="art-item sve pc">
+			<img src="slike/trident.jpg">
+			<h4>MSI MAG Trident S</h4>
+			<ul>
+				<li><i></i>
+				</li>
+				<li>2.399,00 €</li>
+			</ul>
+		</article>
+		<article class="art-item sve merch">
+			<img src="slike/hoodie.jpg">
+			<h4>Majica sa kapuljačom</h4>
+			<ul>
+				<li><i></i>
+				</li>
+				<li>19,98 €</li>
+			</ul>
+		</article>
+		<article class="art-item sve igrice">
+			<img src="slike/towar.jpg">
+			<h4>Total War: PHARAOH Limited Edition</h4>
+			<ul>
+				<li><i></i>
+				</li>
+				<li>56,69 €</li>
+			</ul>
+		</article>
+		<article class="art-item sve igrice">
+			<img src="slike/sims4.jpg">
+			<h4>The Sims 4 Discover University (ekspanzija)</h4>
+			<ul>
+				<li><i></i>
+				</li>
+				<li>36,29 €</li>
+			</ul>
+		</article>
+		<article class="art-item sve pc">
+			<img src="slike/nitro5.jpg">
+			<h4>Acer Nitro 5</h4>
+			<ul>
+				<li><i></i>
+				</li>
+				<li>1.399,00 €</li>
+			</ul>
+		</article>
+		<article class="art-item sve igrice">
+			<img src="slike/cyber.jpg">
+			<h4>Cyberpunk 2077 Ultimate Edition </h4>
+			<ul>
+				<li><i></i>
+				</li>
+				<li>51,59 €</li>
+			</ul>
+		</article>
+		<article class="art-item sve pc">
+			<img src="slike/pavilon.jpg">
+			<h4>HP Pavilion Gaming</h4>
+			<ul>
+				<li><i></i>
+				</li>
+				<li>1.499,00 €</li>
+			</ul>
+		</article>
+		<article class="art-item sve igrice">
+			<img src="slike/stray.jpg">
+			<h4>Stray</h4>
+			<ul>
+				<li><i></i>
+				</li>
+				<li>51,59 €</li>
+			</ul>
+		</article>
+		<article class="art-item sve igrice">
+			<img src="slike/calisto.jpg">
+			<h4>The Callisto Protocol</h4>
+			<ul>
+				<li><i></i>
+				</li>
+				<li>61,89 €</li>
+			</ul>
+		</article>
+		<article class="art-item sve pc">
+			<img src="slike/dell.jpg">
+			<h4>Dell G15</h4>
+			<ul>
+				<li><i></i>
+				</li>
+				<li>1.699,00 €</li>
+			</ul>
+		</article>
+		<article class="art-item sve merch">
+			<img src="slike/kapa.jpg">
+			<h4>Šilterica</h4>
+			<ul>
+				<li><i></i>
+				</li>
+				<li>15,67 €</li>
+			</ul>
+		</article>
+		<article class="art-item sve pc">
+			<img src="slike/legion.jpg">
+			<h4>Lenovo Legion 5i Pro</h4>
+			<ul>
+				<li><i></i>
+				</li>
+				<li>2.699,00 €</li>
+			</ul>
+		</article>
+	</main>
+</div>
+</div>
+<footer>
+	<div class="fcont">
+		<p>Copyright © 2036 <a href="#">GameSphere</a> Company. All right reserved.</p>
+	</div>
+</footer>
+</body>
+</html>
