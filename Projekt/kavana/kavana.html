@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mateo Ljevar - projekt</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="Mateo Ljevar">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" type="image/x-icon" href="../favicon/favicon.ico">		
+	<link rel="stylesheet" type="text/css" href="../css-java/login.css">
+	<link rel="stylesheet" type="text/css" href="../css-java/signup.css">
+	<link rel="stylesheet" type="text/css" href="kavana.css">
+</head>
+<body>
+<header style="background-image: url('slike/header.jpg')";></header>
+<div class="nav">
+		<input type="checkbox" id="check">
+		<label for="check" class="checkbtn">&#9776;</label>	
+		<label class="logo">
+			<img src="../favicon/android-chrome-192x192.png">
+			<h1>GAMESPHERE</h1>
+			<form class="sbar">
+			<input class="src" type="search" placeholder="Što te zanima?">
+			<button class="sbtn" type="submit"></button>
+		</form>
+		</label>
+		<ul>
+			<label for="check" class="checkbtn" id="sik">&#9773;</label>	
+			<li><a href="../index.html">Naslovna</a></li>
+			<li><a href="../trgovina/trgovina.html">Trgovina</a></li>
+			<li><a class="acmeni" href="#">Kavana</a></li>
+			<li><a href="../o-nama/nama.html">O nama</a></li>
+			<li><a onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Prijava</a></li>
+			<li><a onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Registracija</a></li>
+		</ul>
+</div>
+<button onclick="topFunction()" id="myBtn" title="Go to top"></button>
+<!-- Login -->
+<div id="id01" class="logmodal" background="../slike/login.jpg">
+	<form class="logmodal-content loganimate" action="/action_page.php" method="post">
+    <div class="logimgcontainer">
+		<img src="../slike/login.jpg" alt="Avatar" class="logavatar">
+    </div>
+    <div class="logcontainer-log">
+		<label for="uname" class="logus"><b>Korisničko ime</b></label>
+		<input class="login" type="text" placeholder="Unesite korisničko ime" name="uname" required>
+		<label for="loguser" class="logus"><b>Lozinka</b></label>
+		<input class="login" type="password" placeholder="Unesite lozinku" name="psw" required>
+      	<label class="logcheck">
+			<input type="checkbox" checked="checked" name="remember"> Remember me
+		</label>
+		<div class="fa">
+		<button class="login123" type="submit">Prijava</button><br>
+		<span class="fa-or">ili</span><br>
+		<div class="ikona-fa">
+		<a href="#"><img src="../favicon/google.png" class="fa-ikona"></a>
+		<a href="#"><img src="../favicon/facebook.png" class="fa-ikona"></a> 
+		<a href="#"><img src="../favicon/twitter.png" class="fa-ikona"></a>
+		</div>
+    </div>
+    <div class="logcontainer" style="background-color:#331E385">
+		<div class="cancelrub">
+		<button type="logcancel" onclick="document.getElementById('id01').style.display='none'" class="logcancel">Poništi</button></div>
+		<span class="psw">Zaboravljena <a class="logpass" href="#">lozinka?</a></span>
+    </div>
+	</form>
+	</div>
+</div>
+<!-- Signup -->
+<div id="id02" class="smodal" background="../slike/login.jpg">
+	<form class="smodal-content sanimate" action="/action_page.php" method="post">
+    <div class="simgcontainer">
+		<img src="../slike/signup.png" alt="Avatar" class="savatar">
+    </div>
+    <div class="scontainer-log">
+		<label for="uname" class="slogus"><b>Korisničko ime</b></label>
+		<input class="slogin" type="text" placeholder="Unesite korisničko ime" name="uname" required>
+		<label for="smail" class="smail"><b>Email</b></label>
+		<input class="slogin" type="email" placeholder="Unesite Email" name="uname" required>
+		<label for="loguser" class="loguser"><b>Lozinka</b></label>
+		<input class="slogin" type="password" placeholder="Unesite lozinku" name="psw" required>
+		<label for="spasw" class="spasw"><b>Ponovite lozinku</b></label>
+		<input class="slogin" type="password" placeholder="Unesite lozinku" name="spasw" required>
+      	<label class="scheck">
+			<input type="checkbox" checked="checked" name="remember" required> By creating an account you agree to our <a class="signup" href="#">Terms & Privacy.</a>
+		</label>
+	</div>
+	<div class="scontainer" style="background-color:#331E385">
+		<button class="sign123" type="submit">Registriraj me</button>
+		<button type="scancel" onclick="document.getElementById('id02').style.display='none'" class="scancel">Poništi</button>
+	</div>
+	</form>
+</div>
+<script>
+// Get the modal
+var modal1 = document.getElementById('id01');
+var modal2 = document.getElementById('id02');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal1) {
+        modal1.style.display = "none";
+    }
+    if (event.target == modal2) {
+        modal2.style.display = "none";
+    }
+}
+// Get the button
+let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+<button onclick="topFunction()" id="myBtn" title="Top"></button>
+<div class="iza">
+	<div class="bn">
+		<div class="bn-row">
+			<div class="nekaj"><h3>Dobrodošli u trgovinu</h3></div>
+			<h4 class="bn-back"><span class="bn-s">Uživajte</span> u vrhunskoj kavi i hrani uz igranje najnovijih videoigara na velikim ekranima.</h4>
+		</div>
+	</div>
+	<div class="forma">
+		<div class="opis">
+			<h1>Upustite se u gaming avanturu</h1>
+			<h6>Kada uđete u GameSphere, dočekat će vas očaravajuća atmosfera koja isijava energiju gamerskog duha. Uronite u živopisan dekor ukrašen gaming suvenirima, konzolnim postavkama i velikim ekranima koji zrače najnovijim gaming naslovima. Bilo da ste iskusni gamer ili novopečeni u svijetu esporta, GameSphere pruža inkluzivan prostor gdje svatko može doživjeti uzbuđenje gaminga.</h6>
+			<h1>Oslobodite svoj natjecateljski duh</h1>
+			<h6>Za one koji traže uzbuđenje natjecanja, GameSphere redovito organizira turnire s timovima od četiri igrača. Testirajte svoje vještine i oslobodite svoju strateškost u PUBG-u, League of Legendsu, CoD Warzoneu, Rocket Leagueu i World of Tanksu. Sa svakom igrom, adrenalin će porasti, a želja za dominacijom će se pojačati.</h6>
+			<h1>Petak i subota navečer: Pub kvizovi i špeceraj hrane i pića</h1>
+			<h6>Petak i subotu, GameSphere se pretvara u središte intelektualne stimulacije i zajedništva sa svojim uzbudljivim pub kvizovima. Ispitajte svoje gaming znanje, uživajte u našem ukusnom meniju i uživajte u društvu drugih gamera. S krugovima koji se protežu od povijesti gaminga do najnovijih trendova u industriji, bit ćete oduševljeni i prosvijetljeni.</h6>
+			<h1>GameSphere: Mjesto okupljanja za gaming zajednicu</h1>
+			<h6>GameSphere nije samo mjesto za gaming; to je živahna zajednica u kojoj se gameri povezuju, dijele svoju strast i stvaraju doživotna prijateljstva. Bilo da tražite mjesto za druženje, usavršavanje svojih gaming vještina ili jednostavno opuštanje uz osvježavajuće piće, GameSphere je vaša odredišna točka.
+			Dakle, spremite se, okupite svoj tim i upustite se u nezaboravnu gaming avanturu u GameSphereu. Neka se rasplamsa natjecateljski duh, neka procvjeta zajedništvo i neka gaming strast uzleti na nove visine!</h6>
+		</div>
+		<input type="checkbox" id="prijav" name="prijava tima" class="prijavs">
+		<label class="prijav-b" for="prijav">Prijavi tim</label>
+		<div class="box">
+		<div class="prijava">
+			<h1>Prijava tima</h1>
+			<div class="kutija">
+				<input type="radio" id="kapetan" name="filter" class="radiobtn" checked>
+				<input type="radio" id="clan1" name="filter" class="radiobtn">
+				<input type="radio" id="clan2" name="filter" class="radiobtn">
+				<input type="radio" id="clan3" name="filter" class="radiobtn">
+				<header class="klik">	
+					<label for="kapetan" class="filter-label kapetan">Kapetan</label>
+					<label for="clan1" class="filter-label clan1">Član 2</label>
+					<label for="clan2" class="filter-label clan2">Član 3</label>
+					<label for="clan3" class="filter-label clan3">Član 4</label>
+				</header>
+				<main id="sk1">
+					<form class="np" action="/action_page.php" method="post">
+					<header class="p-kap">
+						<h1>Kapetan</h1>
+						<label for="uname" class="labala"><b>Ime</b></label>
+						<input type="text" class="labala" placeholder="Unesite ime" required>
+						<label for="uname" class="labala"><b>Prezime</b></label>
+						<input type="text" class="labala" placeholder="Unesite prezime" required>
+						<label for="uname" class="labala"><b>Email adresa</b></label>
+						<input type="email" class="labala" placeholder="Unesite email" required>						
+					</header>
+					<span id="linija"></span>
+					<div class="kolum">
+					<label for="uname" class="labala"><b>Broj mobitela</b></label>
+						<input type="tel" class="labala" placeholder="Unesite broj mobitela" required>
+					<label class="dat" for="datum">Odaberite datum</label>
+					<input type="date" name="dateofbirth" id="datum" value="2024-01-26" min="2024-01-19" max="2024-04-20">
+					</div>
+					<span id="linija"></span>
+					<span class="butt">
+						<button type="submit">Prijavi tim</button>
+						<button type="reset">Odustani</button>
+					</span>
+					</form>
+				</main>
+				<main id="sk2">
+					<form class="clan-1" action="/action_page.php" method="post">
+					<header class="p-kap">
+						<h1>Igrač #2</h1>
+						<label for="uname" class="labala"><b>Ime</b></label>
+						<input type="text" class="labala" placeholder="Unesite ime" required>
+						<label for="uname" class="labala"><b>Prezime</b></label>
+						<input type="text" class="labala" placeholder="Unesite prezime" required>
+						<label for="uname" class="labala"><b>Email adresa</b></label>
+						<input type="email" class="labala" placeholder="Unesite email" required>						
+					</header>
+					<span id="linija"></span>
+					<div class="kolum">
+					<label for="uname" class="labala"><b>Broj mobitela</b></label>
+						<input type="tel" class="labala" placeholder="Unesite broj mobitela" required>
+					<label class="dat" for="datum">Odaberite datum</label>
+					<input type="date" name="dateofbirth" id="datum" value="2024-01-26" min="2024-01-19" max="2024-04-20">
+					</div>
+					<span id="linija"></span>
+					</form>
+				</main>
+				<main id="sk3">
+					<form class="clan-1" action="/action_page.php" method="post">
+					<header class="p-kap">
+						<h1>Igrač #3</h1>
+						<label for="uname" class="labala"><b>Ime</b></label>
+						<input type="text" class="labala" placeholder="Unesite ime" required>
+						<label for="uname" class="labala"><b>Prezime</b></label>
+						<input type="text" class="labala" placeholder="Unesite prezime" required>
+						<label for="uname" class="labala"><b>Email adresa</b></label>
+						<input type="email" class="labala" placeholder="Unesite email" required>						
+					</header>
+					<span id="linija"></span>
+					<div class="kolum">
+					<label for="uname" class="labala"><b>Broj mobitela</b></label>
+						<input type="tel" class="labala" placeholder="Unesite broj mobitela" required>
+					<label class="dat" for="datum">Odaberite datum</label>
+					<input type="date" name="dateofbirth" id="datum" value="2024-01-26" min="2024-01-19" max="2024-04-20">
+					</div>
+					<span id="linija"></span>
+					</form>
+				</main>
+				<main id="sk4">
+					<form class="clan-1" action="/action_page.php" method="post">
+					<header class="p-kap">
+						<h1>Igrač #4</h1>
+						<label for="uname" class="labala"><b>Ime</b></label>
+						<input type="text" class="labala" placeholder="Unesite ime" required>
+						<label for="uname" class="labala"><b>Prezime</b></label>
+						<input type="text" class="labala" placeholder="Unesite prezime" required>
+						<label for="uname" class="labala"><b>Email adresa</b></label>
+						<input type="email" class="labala" placeholder="Unesite email" required>						
+					</header>
+					<span id="linija"></span>
+					<div class="kolum">
+					<label for="uname" class="labala"><b>Broj mobitela</b></label>
+						<input type="tel" class="labala" placeholder="Unesite broj mobitela" required>
+					<label class="dat" for="datum">Odaberite datum</label>
+					<input type="date" name="dateofbirth" id="datum" value="2024-01-26" min="2024-01-19" max="2024-04-20">
+					</div>
+					<span id="linija"></span>
+					</form>
+				</main>
+			</div>
+		</div>
+		</div>
+	</div>
+	<div class="giza">
+		<h1>Galerija kavane</h1>
+		<div class="cont">
+			<img src="slike/ter.png" id="slika1" style="border-radius:10%;opacity:0.95;">
+			<img src="slike/inside1.png" id="slika7" style="border-radius:10%;opacity:0.95;">
+			<img src="slike/inside3.png" id="slika2" style="border-radius:10%;opacity:0.95;">
+			<img src="slike/inside4.png" id="slika3" style="border-radius:10%;opacity:0.95;">
+			<img src="slike/inside5.png" id="slika4" style="border-radius:10%;opacity:0.95;">
+			<img src="slike/gamepc.png" id="slika5" style="border-radius:10%;opacity:0.95;">
+			<img src="slike/gamepc2.png" id="slika6" style="border-radius:10%;opacity:0.95;">
+		</div>
+	</div>
+</div>
+
+<footer>
+	<div class="fcont">
+		<p>Copyright © 2036 <a href="#">GameSphere</a> Company. All right reserved.</p>
+	</div>
+</footer>
+</body>
+</html>

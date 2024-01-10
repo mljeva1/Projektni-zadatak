@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mateo Ljevar - projekt</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="Mateo Ljevar">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" type="image/x-icon" href="../favicon/favicon.ico">		
+	<link rel="stylesheet" type="text/css" href="../css-java/login.css">
+	<link rel="stylesheet" type="text/css" href="../css-java/signup.css">
+	<link rel="stylesheet" type="text/css" href="nama.css">
+</head>
+<body>
+<header style="background-image: url('slike/header.jpg')";></header>
+<div class="nav">
+		<input type="checkbox" id="check">
+		<label for="check" class="checkbtn">&#9776;</label>	
+		<label class="logo">
+			<img src="../favicon/android-chrome-192x192.png">
+			<h1>GAMESPHERE</h1>
+			<form class="sbar">
+			<input class="src" type="search" placeholder="Što te zanima?">
+			<button class="sbtn" type="submit"></button>
+		</form>
+		</label>
+		<ul>
+			<label for="check" class="checkbtn" id="sik">&#9773;</label>	
+			<li><a href="../index.html">Naslovna</a></li>
+			<li><a href="../trgovina/trgovina.html">Trgovina</a></li>
+			<li><a href="../kavana/kavana.html">Kavana</a></li>
+			<li><a class="acmeni" href="#">O nama</a></li>
+			<li><a onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Prijava</a></li>
+			<li><a onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Registracija</a></li>
+		</ul>
+</div>
+<button onclick="topFunction()" id="myBtn" title="Go to top"></button>
+<!-- Login -->
+<div id="id01" class="logmodal" background="../slike/login.jpg">
+	<form class="logmodal-content loganimate" action="/action_page.php" method="post">
+    <div class="logimgcontainer">
+		<img src="../slike/login.jpg" alt="Avatar" class="logavatar">
+    </div>
+    <div class="logcontainer-log">
+		<label for="uname" class="logus"><b>Korisničko ime</b></label>
+		<input class="login" type="text" placeholder="Unesite korisničko ime" name="uname" required>
+		<label for="loguser" class="logus"><b>Lozinka</b></label>
+		<input class="login" type="password" placeholder="Unesite lozinku" name="psw" required>
+      	<label class="logcheck">
+			<input type="checkbox" checked="checked" name="remember"> Remember me
+		</label>
+		<div class="fa">
+		<button class="login123" type="submit">Prijava</button><br>
+		<span class="fa-or">ili</span><br>
+		<div class="ikona-fa">
+		<a href="#"><img src="../favicon/google.png" class="fa-ikona"></a>
+		<a href="#"><img src="../favicon/facebook.png" class="fa-ikona"></a> 
+		<a href="#"><img src="../favicon/twitter.png" class="fa-ikona"></a>
+		</div>
+    </div>
+    <div class="logcontainer" style="background-color:#331E385">
+		<div class="cancelrub">
+		<button type="logcancel" onclick="document.getElementById('id01').style.display='none'" class="logcancel">Poništi</button></div>
+		<span class="psw">Zaboravljena <a class="logpass" href="#">lozinka?</a></span>
+    </div>
+	</form>
+	</div>
+</div>
+<!-- Signup -->
+<div id="id02" class="smodal" background="../slike/login.jpg">
+	<form class="smodal-content sanimate" action="/action_page.php" method="post">
+    <div class="simgcontainer">
+		<img src="../slike/signup.png" alt="Avatar" class="savatar">
+    </div>
+    <div class="scontainer-log">
+		<label for="uname" class="slogus"><b>Korisničko ime</b></label>
+		<input class="slogin" type="text" placeholder="Unesite korisničko ime" name="uname" required>
+		<label for="smail" class="smail"><b>Email</b></label>
+		<input class="slogin" type="email" placeholder="Unesite Email" name="uname" required>
+		<label for="loguser" class="loguser"><b>Lozinka</b></label>
+		<input class="slogin" type="password" placeholder="Unesite lozinku" name="psw" required>
+		<label for="spasw" class="spasw"><b>Ponovite lozinku</b></label>
+		<input class="slogin" type="password" placeholder="Unesite lozinku" name="spasw" required>
+      	<label class="scheck">
+			<input type="checkbox" checked="checked" name="remember" required> By creating an account you agree to our <a class="signup" href="#">Terms & Privacy.</a>
+		</label>
+	</div>
+	<div class="scontainer" style="background-color:#331E385">
+		<button class="sign123" type="submit">Registriraj me</button>
+		<button type="scancel" onclick="document.getElementById('id02').style.display='none'" class="scancel">Poništi</button>
+	</div>
+	</form>
+</div>
+<script>
+// Get the modal
+var modal1 = document.getElementById('id01');
+var modal2 = document.getElementById('id02');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal1) {
+        modal1.style.display = "none";
+    }
+    if (event.target == modal2) {
+        modal2.style.display = "none";
+    }
+}
+// Get the button
+let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+<div class="iza">
+	<div class="bn">
+		<div class="bn-row">
+			<div class="nekaj"><h3>O nama</h3></div>
+		</div>
+	</div>
+</div>
+<div class="content">
+	<div class="prvi">
+		<h3>Portal</h3>
+		<p>Gamesphere je portal koji je posvećen gamingu. Portal pruža informacije, vijesti, recenzije i druge sadržaje o najnovijim igrama, konzolama i tehnologiji. Gamesphere također pruža mogućnost korisnicima da komuniciraju jedni s drugima, razmjenjuju savjete i pronađu nove prijatelje.</p>
+		<p>Portal se može usredotočiti na retro igre, pružajući informacije, vijesti, recenzije i druge sadržaje o najpopularnijim retro igrama. Portal također može pružiti mogućnost korisnicima da dijele svoje uspomene na retro igre i pronađu nove prijatelje koji dijele njihovu strast.</p>
+	</div>
+	<div class="drugi">
+		<h3>Naša lokacija:</h3>
+		<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2331.520457077532!2d15.934981093160506!3d45.97803567869229!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2shr!4v1704891155332!5m2!1sen!2shr" width="100%" height="100%" style="border:0; border-radius: 23px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+	</div>
+	<div class="treci">
+		<h3>Trgovina</h3>
+		<p>Gamesphere ima stručno osoblje koje može pomoći korisnicima da pronađu proizvode koji su im potrebni. Trgovina također nudi uslugu dostave na kućnu adresu. Cijene proizvoda u trgovini Gamesphere su konkurentne. Trgovina često nudi popuste i promocije.</p>
+		<p>Trgovina nudi širok izbor proizvoda za sve vrste gamerskih budžeta. Na primjer, možete napisati da trgovina nudi "i najnovije vrhunske komponente za gaming PC-je, kao i pristupačne opcije za igrače s ograničenim budžetom".</p>
+	</div>
+	<div class="cetvrti">
+		<h3>Kavana</h3>
+		<p>Kavana je uređena u modernom stilu i opremljena je najnovijom gaming opremom. Kavana ima širok izbor igara za igranje, uključujući akcijske igre, avanturističke igre, sportske igre i strategijske igre. Kavana također ima besplatan Wi-Fi, tako da možete igrati svoje online igre.</p>
+		<p>Kavana nudi ugodnu atmosferu za opuštanje i uživanje u igri. Kavana ima udobna sjedala i stoliće, a također nudi piće i grickalice po pristupačnim cijenama. Kavana također ima terasu na kojoj se možete opustiti i uživati u igri na otvorenom.</p>
+		<p>Kavana je idealno mjesto za sve ljubitelje gaminga koji žele upoznati nove ljude i uživati u igri u ugodnom okruženju. Kavana također nudi priliku za druženje s drugim igračima. Kavana ima turnire i događaje za igrače, a također nudi klubove za igrače koji dijele slične interese.</p>
+	</div>
+	<div class="mobo">
+		<h3>Naša lokacija:</h3>
+		<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2331.520457077532!2d15.934981093160506!3d45.97803567869229!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2shr!4v1704891155332!5m2!1sen!2shr" width="100%" height="100%" style="border:0; border-radius: 23px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+	</div>
+</div>
+<footer>
+	<div class="fcont">
+		<p>Copyright © 2036 <a href="#">GameSphere</a> Company. All right reserved.</p>
+	</div>
+</footer>
+</body>
+</html>
